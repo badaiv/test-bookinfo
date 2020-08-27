@@ -13,6 +13,7 @@ edit `env.properties` file to setup some properties like Minkube driver or Istio
 ### Start env
 this should start minikube, install [Istio](https://istio.io/latest/docs/), install required pip modules and start [pipenv](https://github.com/pypa/pipenv) shell in your terminal.
 ```
+chmod u+x start.sh
 ./start.sh
 ```
 ### Create resources in k8s
@@ -36,7 +37,12 @@ istioctl dashboard kiali
 #or
 istioctl dashboard grafana
 ```
-
+### Access productpage
+to enable localhost portforwarding from Istio lb
+```
+minikube tunnel
+```
+then open in browser `http://127.0.0.1/productpage`
 ### Destroy env
 this will destroy whole k8s cluster
 ```

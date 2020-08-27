@@ -134,7 +134,7 @@ class App():
             name=bname)
         print(f"Custom objet deleted. name='%s'" % bname)
 
-    def wait_for_deployment_complete(self, body, timeout=60):
+    def wait_for_deployment_complete(self, body, timeout=600):
         start = time.time()
         name = body['metadata']['name']
         while time.time() - start < timeout:
