@@ -149,7 +149,7 @@ class App():
                 print(f"deployment rollout {name} completed.")
                 return True
             else:
-                print(f"waiting deployment {name} to be completed", )
+                print(f"waiting deployment {name} to be completed...", )
 
         raise RuntimeError(f'Waiting timeout for deployment {name}')
 

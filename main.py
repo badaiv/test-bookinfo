@@ -8,7 +8,7 @@ def main():
     app.k_apply()
     network.k_apply()
 
-    # app.k_check_status()
+    app.k_check_status()
 
     # uncomment to delete resources
     # app.k_delete()
