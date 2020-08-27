@@ -7,7 +7,9 @@ This demo app  is supposed to show demo setup of Minikube + Istio + bookinfo app
 You should have installed:
 * python >= 3.6 [download](https://www.python.org/downloads/)
 * [minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
-  
+### Configuration
+edit `env.properties` file to setup some properties like Minkube driver or Istio version.
+
 ### Start env
 this should start minikube, install [Istio](https://istio.io/latest/docs/), install required pip modules and start [pipenv](https://github.com/pypa/pipenv) shell in your terminal.
 ```
@@ -23,9 +25,6 @@ you can check logs of container.
 ```
 kubectl logs -l app=curl -c curl -f
 ```
-### Configuration
-edit `env.properties` file to setup some properties like Minkube driver or Istio version.
-
 ### Metrics
 To access metrics dashboard you can use k8s dashboard
 ```
@@ -38,7 +37,7 @@ istioctl dashboard kiali
 istioctl dashboard grafana
 ```
 
-## Destroy env
+### Destroy env
 this will destroy whole k8s cluster
 ```
 minkube delete

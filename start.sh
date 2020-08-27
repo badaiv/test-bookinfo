@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -x
+#set -x
 
 #load some properties
 load_env_properties() {
@@ -41,7 +41,7 @@ start_minikube() {
   echo "minikube version:"
   minikube version
   echo "minikube start cluster:"
-  minikube status || \
+  minikube status 2>/dev/null || \
     (minikube start --driver=$MINIKUBE_DRIVER --cpus $MINIKUBE_CPU --memory $MINIKUBE_RAM --addons ingress --addons metrics-server \
     && minikube status)
   echo "kubectl current-context:"
