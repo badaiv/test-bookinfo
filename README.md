@@ -23,7 +23,7 @@ you can check logs of container.
 ```
 kubectl logs -l app=curl -c curl -f
 ```
-### configuration
+### Configuration
 edit `env.properties` file to setup some properties like Minkube driver or Istio version.
 
 ### Metrics
@@ -38,7 +38,7 @@ istioctl dashboard kiali
 istioctl dashboard grafana
 ```
 
-## destroy env
+## Destroy env
 this will destroy whole k8s cluster
 ```
 minkube delete
